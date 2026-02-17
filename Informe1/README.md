@@ -3,6 +3,7 @@
 Proyecto del curso **Fundamentos de Aprendizaje Automático**.
 
 Estudiante: *Paula Inés Llanos López*
+[Dataset Utilizado](https://drive.google.com/file/d/1CGjXl7vW0wgkhLZAcUhNw8317Htfclcd/view?usp=sharing) 
 
 ---
 
@@ -10,10 +11,9 @@ Estudiante: *Paula Inés Llanos López*
 
 Este proyecto construye un **pipeline completo de Machine Learning** para identificar **gastos hormiga** a partir del historial de transacciones bancarias de diferentes personas.
 
-Se combinan:
-- Reglas de negocio (palabras clave y umbrales de monto),
+Se usan:
 - Ingeniería de características numéricas y de texto,
-- Un modelo de clasificación supervisado (Random Forest),
+- Un modelo de clasificación supervisado,
 - Múltiples **visualizaciones automáticas** para analizar el comportamiento del gasto.
 
 ---
@@ -38,8 +38,6 @@ El objetivo es:
 ---
 
 ## 3. Arquitectura del Proyecto
-
-El proyecto sigue una arquitectura modular, con cada etapa en un archivo separado dentro de `src/`:
 
 - `data_loader.py`: carga y limpieza básica del CSV original.
 - `preprocessing.py`: filtrado de gastos y creación de la etiqueta `es_gasto_hormiga`.
@@ -87,13 +85,6 @@ Informe1/
    # Activar entorno en Windows (ejemplo)
    ..\ml_env\Scripts\activate
    ```
-
-2. Instalar dependencias (si aún no están instaladas):
-
-   ```bash
-   pip install -r ..\requirements.txt
-   ```
-
 
 ---
 
@@ -269,5 +260,6 @@ Algunas posibles extensiones:
 - Probar otros modelos (por ejemplo, `LogisticRegression`, `XGBoost`) y comparar resultados.
 - Ajustar el umbral `DEFAULT_THRESHOLD` según el nivel de gasto de cada usuario.
 - Incluir métricas específicas sobre el **impacto total** de los gastos hormiga (porcentaje del gasto total que representan).
+
 
 
