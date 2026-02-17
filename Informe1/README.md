@@ -246,7 +246,7 @@ Principales variables utilizadas por el modelo:
 
 ---
 
-## 10. Conclusiones (Guía)
+## 10. Conclusiones
 
 - El pipeline permite **automatizar** la detección de gastos hormiga combinando reglas y aprendizaje automático.
 - Las reglas de negocio filtran correctamente movimientos que **no** deben considerarse hormiga (transferencias, cuotas, intereses, transporte, etc.).
@@ -269,4 +269,5 @@ Algunas posibles extensiones:
 - Probar otros modelos (por ejemplo, `LogisticRegression`, `XGBoost`) y comparar resultados.
 - Ajustar el umbral `DEFAULT_THRESHOLD` según el nivel de gasto de cada usuario.
 - Incluir métricas específicas sobre el **impacto total** de los gastos hormiga (porcentaje del gasto total que representan).
+
 
