@@ -2,7 +2,7 @@
 
 Proyecto del curso **Fundamentos de Aprendizaje Automático**.
 
-Estudiante: *Paula Inés Llanos López*  \\
+Estudiante: *Paula Inés Llanos López*
 
 ---
 
@@ -269,3 +269,4 @@ Algunas posibles extensiones:
 - Probar otros modelos (por ejemplo, `LogisticRegression`, `XGBoost`) y comparar resultados.
 - Ajustar el umbral `DEFAULT_THRESHOLD` según el nivel de gasto de cada usuario.
 - Incluir métricas específicas sobre el **impacto total** de los gastos hormiga (porcentaje del gasto total que representan).
+
