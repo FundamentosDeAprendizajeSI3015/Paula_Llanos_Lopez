@@ -1,7 +1,5 @@
 # Fundamentos de Aprendizaje Automático
 
-Este repositorio contiene las actividades, ejercicios y proyecto desarrollados por **Paula Llanos López** para el curso de **Fundamentos de Aprendizaje Automático**.
-
 ## Estructura del repositorio
 
 - `Informe1_PaulaLlanos/`
