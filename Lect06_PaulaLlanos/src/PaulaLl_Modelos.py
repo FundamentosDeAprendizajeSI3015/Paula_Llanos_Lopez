@@ -254,7 +254,6 @@ y_pred_gb, met_gb_test = evaluar_modelo("GRADIENT BOOST  — Prueba", pipeline_g
 # 8. MATRICES DE CONFUSIÓN  (Entrenamiento y Validación — 4 matrices)
 # ─────────────────────────────────────────────────────────────
 REPORTES_DIR = os.path.join(BASE_DIR, "..", "Reportes")
-REPORTES_DIR = os.path.join(BASE_DIR, "..", "Reportes")
 os.makedirs(REPORTES_DIR, exist_ok=True)
 
 clases = sorted(y.unique())
