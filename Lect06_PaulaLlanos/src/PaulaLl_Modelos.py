@@ -253,7 +253,7 @@ y_pred_gb, met_gb_test = evaluar_modelo("GRADIENT BOOST  — Prueba", pipeline_g
 # ─────────────────────────────────────────────────────────────
 # 8. MATRICES DE CONFUSIÓN  (Entrenamiento y Validación — 4 matrices)
 # ─────────────────────────────────────────────────────────────
-REPORTES_DIR = r"C:\Users\llano\Desktop\EAFIT\FundamentosApren\MiRepo\Paula_Llanos_Lopez\Lect06_PaulaLlanos\Reportes"
+REPORTES_DIR = os.path.join(BASE_DIR, "..", "Reportes")
 os.makedirs(REPORTES_DIR, exist_ok=True)
 
 clases = sorted(y.unique())
@@ -340,3 +340,55 @@ plt.tight_layout()
 salida_metricas = os.path.join(REPORTES_DIR, "metricas_comparativas.png")
 plt.savefig(salida_metricas, dpi=150, bbox_inches="tight")
 print(f"Gráfica de métricas guardada en: {salida_metricas}")
+
+# ─────────────────────────────────────────────────────────────
+# 10. IMPORTANCIA DE VARIABLES
+# ─────────────────────────────────────────────────────────────
+importancias_rf = pipeline_rf.named_steps["modelo"].feature_importances_
+importancias_gb = pipeline_gb.named_steps["modelo"].feature_importances_
+
+# Ordenar de mayor a menor (según RF)
+orden = np.argsort(importancias_rf)[::-1]
+features_ord = [FEATURES[i] for i in orden]
+imp_rf_ord   = importancias_rf[orden]
+imp_gb_ord   = importancias_gb[orden]
+
+print("\n" + "═" * 55)
+print("  IMPORTANCIA DE VARIABLES")
+print("═" * 55)
+print(f"  {'Feature':<18}  {'RF':>8}  {'GB':>8}")
+print("  " + "-" * 38)
+for f, r, g in zip(features_ord, imp_rf_ord, imp_gb_ord):
+    print(f"  {f:<18}  {r:>8.4f}  {g:>8.4f}")
+
+x_imp = np.arange(len(FEATURES))
+ancho_imp = 0.35
+
+fig_imp, ax_imp = plt.subplots(figsize=(10, 5))
+bars_rf = ax_imp.bar(x_imp - ancho_imp/2, imp_rf_ord, ancho_imp,
+                     label="Random Forest", color="#1f77b4")
+bars_gb = ax_imp.bar(x_imp + ancho_imp/2, imp_gb_ord, ancho_imp,
+                     label="Gradient Boosting", color="#d62728")
+
+for bar in bars_rf:
+    ax_imp.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.005,
+                f"{bar.get_height():.3f}", ha="center", va="bottom", fontsize=8)
+for bar in bars_gb:
+    ax_imp.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.005,
+                f"{bar.get_height():.3f}", ha="center", va="bottom", fontsize=8)
+
+ax_imp.set_xticks(x_imp)
+ax_imp.set_xticklabels(features_ord, rotation=20, ha="right")
+ax_imp.set_ylabel("Importancia")
+ax_imp.set_ylim(0, max(imp_rf_ord.max(), imp_gb_ord.max()) * 1.20)
+ax_imp.legend()
+ax_imp.grid(axis="y", alpha=0.3)
+ax_imp.set_title("Importancia de Variables — ¿Es Gasto Hormiga?",
+                 fontsize=12, fontweight="bold")
+plt.tight_layout()
+
+salida_imp = os.path.join(REPORTES_DIR, "importancia_variables.png")
+plt.savefig(salida_imp, dpi=150, bbox_inches="tight")
+print(f"\nGráfica importancia guardada en: {salida_imp}")
+print(f"\n  Variable MÁS importante (RF) : {features_ord[0]}  ({imp_rf_ord[0]:.4f})")
+print(f"  Variable MÁS importante (GB) : {FEATURES[np.argmax(importancias_gb)]}  ({importancias_gb.max():.4f})")
