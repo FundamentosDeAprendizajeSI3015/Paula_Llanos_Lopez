@@ -253,7 +253,7 @@ y_pred_gb, met_gb_test = evaluar_modelo("GRADIENT BOOST  — Prueba", pipeline_g
 # ─────────────────────────────────────────────────────────────
 # 8. MATRICES DE CONFUSIÓN  (Entrenamiento y Validación — 4 matrices)
 # ─────────────────────────────────────────────────────────────
-REPORTES_DIR = r"C:\Users\llano\Desktop\EAFIT\FundamentosApren\MiRepo\Paula_Llanos_Lopez\Lect06_PaulaLlanos\Reportes"
+REPORTES_DIR = os.path.join(BASE_DIR, "..", "Reportes")
 os.makedirs(REPORTES_DIR, exist_ok=True)
 
 clases = sorted(y.unique())
