@@ -20,6 +20,17 @@
 	- `Titanic-Dataset.csv`: dataset del Titanic usado en las clases.
 	- `Graficos/`: carpeta donde se guardan automáticamente las gráficas generadas.
 
+- `Lect06_PaulaLlanos/`
+	- `src/PaulaLl_Modelos.py`: modelos de clasificación (**Árbol de Decisión** y **Random Forest**) aplicados al dataset de la Hormiga.
+	- `src/Dataset_Hormiga.csv`: dataset original de la Hormiga.
+	- `src/Dataset_Hormiga_Limpio.csv`: dataset preprocesado y limpio.
+	- `Reportes/`: carpeta donde se guardan automáticamente los reportes y gráficas generadas.
+
+- `Lect08_PaulaLlanos/`
+	- `PaulaLl_UdeA.py`: pipeline completo **FIRE-UdeA** — EDA, preprocesamiento y modelos de clasificación (**Árbol de Decisión**, **Random Forest** y **Gradient Boosting**) para estimar riesgo de tensión financiera universitaria.
+	- `dataset_sintetico_FIRE_UdeA_realista.csv`: dataset sintético realista con variables financieras de unidades académicas.
+	- `graficas/`: carpeta con las 14 gráficas generadas automáticamente (EDA, métricas, matrices de confusión, curvas ROC, importancia de variables y árbol de decisión).
+
 ## Requisitos
 
 Se recomienda usar un entorno virtual de Python (por ejemplo `ml_env`) con las librerías indicadas por el curso, incluyendo al menos:
