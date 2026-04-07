@@ -1,22 +1,3 @@
-"""
-=============================================================================
-DETECCIÓN DE GASTOS HORMIGA - ENFOQUE HÍBRIDO NO SUPERVISADO + SUPERVISADO
-=============================================================================
-Script completo de Data Science para identificar transacciones clasificadas 
-como "Gastos Hormiga" (pequeños gastos frecuentes) utilizando:
-  - Análisis No Supervisado (Clustering)
-  - Reevaluación de Etiquetas mediante Consenso
-  - Modelado Supervisado (Comparación de escenarios)
-
-Autor: Data Scientist Senior
-Fecha: 2026
-=============================================================================
-"""
-
-# ============================================================================
-# 1. IMPORTACIONES Y CONFIGURACIÓN INICIAL
-# ============================================================================
-
 import os
 import sys
 import warnings
