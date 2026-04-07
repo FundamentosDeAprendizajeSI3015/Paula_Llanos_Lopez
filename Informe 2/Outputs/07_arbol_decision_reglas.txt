@@ -1,0 +1,7 @@
+ESTRUCTURA DEL ÁRBOL DE DECISIÓN (Etiquetas Reevaluadas)
+================================================================================
+
+|--- FRECUENCIA_DESC <= 43.00
+|   |--- class: 0
+|--- FRECUENCIA_DESC >  43.00
+|   |--- class: 1
