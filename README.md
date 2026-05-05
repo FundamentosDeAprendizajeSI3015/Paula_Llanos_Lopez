@@ -8,6 +8,12 @@
 	- `reports/`: espacio para gráficos y resultados generados por el informe.
 	- `README.md`: descripción específica del Informe 1.
 
+- `Informe 2_PaulaLlanos/`
+	- `Dataset_Hormiga_Binario.csv`: dataset binario usado en el informe.
+	- `deteccion_gastos_hormiga.py`: script principal de análisis y modelado.
+	- `Outputs/`: resultados y salidas generadas.
+	- `README.md`: descripción específica del Informe 2.
+
 - `Lect02_PaulaLlanos/`
 	- `llanos_paula_peliculas.py`: ejercicios de la clase 2, trabajando con un dataset de películas.
 
@@ -30,6 +36,22 @@
 	- `PaulaLl_UdeA.py`: pipeline completo **FIRE-UdeA** — EDA, preprocesamiento y modelos de clasificación (**Árbol de Decisión**, **Random Forest** y **Gradient Boosting**) para estimar riesgo de tensión financiera universitaria.
 	- `dataset_sintetico_FIRE_UdeA_realista.csv`: dataset sintético realista con variables financieras de unidades académicas.
 	- `graficas/`: carpeta con las 14 gráficas generadas automáticamente (EDA, métricas, matrices de confusión, curvas ROC, importancia de variables y árbol de decisión).
+
+- `Lect09_PaulaLlanos/`
+	- `Sintetico.py`: análisis y modelado con dataset sintético FIRE-UdeA.
+	- `Realista.py`: análisis y modelado con dataset sintético realista FIRE-UdeA.
+	- `dataset_sintetico_FIRE_UdeA.csv`: dataset sintético base.
+	- `dataset_sintetico_FIRE_UdeA_realista.csv`: dataset sintético realista.
+	- `Graficas/`: carpeta con las gráficas generadas.
+
+- `Lect10_PaulaLlanos/`
+	- `analisis_completo.py`: análisis completo y modelado del dataset FIRE-UdeA.
+	- `eliminar_labels.py`: script de limpieza para remover etiquetas.
+	- `dataset_sintetico_FIRE_UdeA.csv`: dataset sintético base.
+	- `dataset_sintetico_FIRE_UdeA_realista.csv`: dataset sintético realista.
+	- `dataset_sintetico_FIRE_UdeA_sin_label.csv`: dataset sintético sin etiqueta.
+	- `dataset_sintetico_FIRE_UdeA_realista_sin_label.csv`: dataset sintético realista sin etiqueta.
+	- `Graficas/`: carpeta con las gráficas generadas.
 
 ## Requisitos
 
